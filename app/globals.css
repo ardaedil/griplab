@@ -159,12 +159,75 @@ p { text-wrap: pretty; }
 .prose-page p { margin-block: .8rem 0; color: var(--muted); }
 .prose-page .review-note { display: inline-block; padding: .45rem .7rem; color: var(--ink); background: var(--pale); border: 1px solid var(--line); border-radius: .35rem; font-size: .875rem; }
 
+.pilot-layout { display: grid; align-items: start; gap: 2rem; max-width: 68rem; }
+.pilot-intro h1 { margin-top: .8rem; font-size: clamp(3.1rem, 6.4vw, 5.5rem); letter-spacing: -.08em; }
+.pilot-intro > p:not(.eyebrow) { max-width: 31ch; margin-top: .95rem; color: var(--muted); font-size: 1.08rem; }
+.pilot-aside, .pilot-form, .receipt-card { border: 1px solid var(--line); border-radius: .8rem; }
+.pilot-aside { margin-top: 1.4rem; padding: 1.2rem; background: var(--pale); }
+.pilot-aside h2 { margin-top: .75rem; font-size: 1.3rem; letter-spacing: -.035em; }
+.pilot-aside ul { margin-top: .6rem; padding-left: 1.15rem; list-style: disc; color: var(--muted); }
+.pilot-aside li + li { margin-top: .35rem; }
+
+.pilot-form, .receipt-card { min-width: 0; padding: clamp(1rem, 4vw, 2.2rem); background: #fff; }
+.pilot-form h2 { font-size: clamp(1.55rem, 3.5vw, 2rem); letter-spacing: -.045em; }
+.form-intro { margin-top: .45rem; color: var(--muted); }
+.form-fields { display: grid; min-width: 0; gap: 1.1rem; margin-top: 1.35rem; }
+.form-row { display: grid; gap: 1.1rem; }
+.form-field { min-width: 0; }
+.form-field label { display: block; font-weight: 800; }
+.field-optional { margin-left: .2rem; color: var(--muted); font-size: .875rem; font-weight: 600; white-space: nowrap; }
+.field-hint { margin-top: .12rem; color: var(--muted); font-size: .875rem; }
+.field-hint a, .error-summary a { text-decoration: underline; text-underline-offset: .2em; }
+
+.form-field :is(input, select, textarea) {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 3rem;
+  margin-top: .35rem;
+  border: 1px solid #899789;
+  border-radius: .4rem;
+  padding: .54rem .7rem;
+  background: #fcfcf9;
+  font-size: 1rem;
+}
+.form-field textarea { resize: vertical; }
+.form-field select {
+  appearance: none;
+  padding-right: 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%2319271e' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: right .65rem center;
+}
+.form-field input::placeholder { color: #607062; }
+
+.form-consent { display: grid; gap: .45rem; padding-top: .4rem; border-top: 1px solid var(--line); }
+.checkbox-row { display: flex; align-items: flex-start; gap: .65rem; min-height: 2.75rem; padding-block: .55rem; cursor: pointer; }
+.checkbox-row input { flex: none; width: 1.18rem; height: 1.18rem; margin-top: .2rem; accent-color: #315c36; }
+.form-submit { justify-self: start; width: 100%; }
+.form-fields [aria-invalid="true"] { border-color: #a0252b; }
+.checkbox-row input[aria-invalid="true"] { outline: 1px solid #a0252b; outline-offset: 2px; }
+.field-error { margin-top: .25rem; color: #a0252b; font-size: .875rem; font-weight: 750; }
+.error-summary { margin-top: 1rem; padding: .9rem 1rem; border: 1px solid #a0252b; border-radius: .45rem; color: #801b22; background: #fff5f3; }
+.error-summary:focus { outline: 2px solid #a0252b; outline-offset: 3px; }
+.error-summary h3 { font-size: 1rem; line-height: 1.45; letter-spacing: normal; }
+.error-summary ul { margin-top: .45rem; padding-left: 1.15rem; list-style: disc; }
+.receipt-card h1 { margin-top: 1rem; }
+.receipt-card .button { margin-top: 1.35rem; }
+
+@media (min-width: 36rem) {
+  .form-row { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); }
+  .form-submit { width: auto; }
+}
+
 @media (min-width: 48rem) {
   .nav-detail { display: inline; }
   .hero { grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); }
   .concept-figure figcaption { inset: auto 1rem 1rem auto; }
   .step-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .faq { grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); gap: 3rem; }
+  .pilot-layout { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(2rem, 6vw, 5rem); }
 }
 
 @media (max-width: 23rem) {

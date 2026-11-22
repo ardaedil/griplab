@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ClipboardList, ScanLine, SlidersHorizontal } from "lucide-react";
+import { proposedPrice } from "@/lib/product";
 
 const steps = [
   { icon: ClipboardList, title: "Share your setup", detail: "Tell us what you play with and what you’d like to change about how your grip feels." },
@@ -10,7 +11,7 @@ const steps = [
 
 const questions = [
   { question: "Will it fit my racket?", answer: "Compatibility is unconfirmed until your specific racket-handle profile has been physically verified. A brand, model name, or grip size alone can’t confirm fit." },
-  { question: "What does it cost?", answer: "The proposed starting price is $49, excluding shipping. The interest form is free to submit and takes no payment." },
+  { question: "What does it cost?", answer: `The proposed starting price is ${proposedPrice}, excluding shipping. The interest form is free to submit and takes no payment.` },
   { question: "What happens after I sign up?", answer: "We’ll review the racket and grip details you share. If there’s a potential fit or we need more information, we may email you about the pilot. Submitting the form doesn’t reserve a prototype." },
 ];
 
@@ -23,7 +24,7 @@ export default function Home() {
           <h1 id="hero-title">Your racket.<br />Your grip.</h1>
           <p className="hero-description">A customizable tennis racket grip insert in development. Tell us what you play with and help shape what we prototype.</p>
           <Link className="button button-primary" href="/pilot">Join the pilot</Link>
-          <p className="price"><strong>$49</strong><span>Proposed starting price<br />Excludes shipping</span></p>
+          <p className="price"><strong>{proposedPrice}</strong><span>Proposed starting price<br />Excludes shipping</span></p>
         </div>
         <figure className="concept-figure">
           <Image src="/grip-concept.webp" alt="Exploded concept drawing of a lime-green grip insert above a dark tennis racket handle." width={1254} height={1254} preload sizes="(max-width: 767px) 92vw, (max-width: 1300px) 48vw, 580px" />
