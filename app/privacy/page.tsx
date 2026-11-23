@@ -11,7 +11,7 @@ export default function PrivacyPage() {
       <p>Draft updated November 23, 2026. This notice covers the GripLab tennis-grip pilot interest form, not a future store or product-ordering service.</p>
 
       <h2>Who is responsible</h2>
-      <p>GripLab is a prelaunch project developing a customizable tennis-racket grip insert. <strong>The legal operator and a working privacy-contact email must be identified before public registration opens.</strong> The project is currently testing privately; do not submit real personal information while this notice remains a draft.</p>
+      <p>GripLab is a prelaunch project developing a customizable tennis-racket grip insert, currently operated by Arda Edil in an individual capacity (not by an LLC). <strong>A working privacy-contact email must be chosen and published before public registration opens.</strong> The project is currently testing privately; do not submit real personal information while this notice remains a draft.</p>
 
       <h2>Information you provide</h2>
       <p>The pilot form collects your email address, grip size, and your response about willingness to buy at the proposed price. It may also collect an optional racket brand/model and your written feedback about your current grip. We record the price shown to you, submission time, and the timestamps and versions of your consent choices.</p>
@@ -36,7 +36,7 @@ export default function PrivacyPage() {
       <p>The application uses server-side validation, restricted database permissions, and HTTPS hosting. No service can guarantee absolute security. The pilot is intended for adults aged 18 or older; if we learn that a minor submitted personal information, we will take steps to remove it.</p>
 
       <h2>Changes and contact</h2>
-      <p>We will post updates to this notice with a new effective date when practices change. <strong>Before public launch, the operator, privacy-contact email, and retention schedule must be supplied here.</strong></p>
+      <p>We will post updates to this notice with a new effective date when practices change. <strong>Before public launch, the founder must confirm the published privacy-contact email, retention schedule, and requests process.</strong></p>
       <p>See the <Link href="/terms">pilot terms</Link> for the nature of this early-stage program.</p>
     </article>
   );
