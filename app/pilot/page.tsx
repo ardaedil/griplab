@@ -16,6 +16,7 @@ export default function PilotPage() {
           <span className="step-icon"><ListChecks aria-hidden="true" size={22} /></span>
           <h2 id="pilot-expectations">What to expect</h2>
           <ul>
+            <li>The pilot is for adults aged 18 or older who currently live in the United States. Eligibility is self-attested.</li>
             <li>Personalization and prototype review are initially manual.</li>
             <li>Fit requires physical verification of your specific racket-handle profile.</li>
             <li>{proposedPrice} is the proposed starting price, excluding shipping. The form takes no payment.</li>

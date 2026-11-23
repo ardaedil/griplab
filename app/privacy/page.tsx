@@ -11,7 +11,7 @@ export default function PrivacyPage() {
       <p>Draft updated November 23, 2026. This notice covers the Paltune tennis-grip pilot interest form, not a future store or product-ordering service.</p>
 
       <h2>Who is responsible</h2>
-      <p>Paltune is a prelaunch project developing a customizable tennis-racket grip insert, currently operated by Arda Edil in an individual capacity (not by an LLC). <strong>A working privacy-contact email must be chosen and published before public registration opens.</strong> The project is currently testing privately; do not submit real personal information while this notice remains a draft.</p>
+      <p>Paltune is a prelaunch project developing a customizable tennis-racket grip insert, currently operated by Arda Edil in an individual capacity (not by an LLC). For questions or privacy requests, email <a href="mailto:ardaedil@gmail.com">ardaedil@gmail.com</a>. This is the approved pilot contact address until a verified Paltune-domain mailbox is available. The project is currently testing privately; do not submit real personal information while this notice remains a draft.</p>
 
       <h2>Information you provide</h2>
       <p>The pilot form collects your email address, grip size, and your response about willingness to buy at the proposed price. It may also collect an optional racket brand/model and your written feedback about your current grip. We record the price shown to you, submission time, and the timestamps and versions of your consent choices.</p>
@@ -29,14 +29,14 @@ export default function PrivacyPage() {
       <p>After a successful submission, Paltune sets a short-lived, HTTP-only receipt cookie for the thank-you page; it lasts up to 15 minutes. The application currently has no third-party browser analytics, advertising pixels, or marketing tracking cookies. During private staging, Vercel Authentication may also use login-related cookies to restrict access.</p>
 
       <h2>Retention and deletion</h2>
-      <p><strong>Founder decision required:</strong> Before opening registration to the public, Paltune must publish a specific application-retention period and establish a process for deleting records after that period or after a valid deletion request. Until those decisions are approved, this remains a private-test draft and is not a final public privacy notice.</p>
-      <p>Once the contact channel is published, you will be able to request access to, correction of, or deletion of your application, or withdraw optional product-update permission, by contacting Paltune. Withdrawal of product-update permission will not affect any lawful processing already completed. Certain limited records may need to be retained where applicable law requires them.</p>
+      <p><strong>Founder-selected retention period: up to 12 months from the original application date.</strong> We intend to delete applications when they reach that limit, or sooner on a verified deletion request, except where applicable law requires keeping limited information. The automatic deletion job and its monitoring must be installed and verified before public registration opens; it is not active in this draft environment.</p>
+      <p>To request access, correction, or deletion of your application, or to withdraw permission for optional product updates, email <a href="mailto:ardaedil@gmail.com">ardaedil@gmail.com</a>, preferably from the address used to sign up so we can verify the request. We will confirm control of the signup address before releasing or changing application details. Withdrawal will not undo lawful processing already completed. No automated marketing emails are currently sent.</p>
 
       <h2>Security and age</h2>
-      <p>The application uses server-side validation, restricted database permissions, and HTTPS hosting. No service can guarantee absolute security. The pilot is intended for adults aged 18 or older; if we learn that a minor submitted personal information, we will take steps to remove it.</p>
+      <p>The application uses server-side validation, restricted database permissions, and HTTPS hosting. No service can guarantee absolute security. Registration requires applicants to confirm that they are at least 18 and currently live in the United States. These statements are self-attestations, not independent age, identity, or residency verification. We do not request birth dates or residential addresses. If we learn that an ineligible applicant submitted information, we will take steps to remove it.</p>
 
       <h2>Changes and contact</h2>
-      <p>We will post updates to this notice with a new effective date when practices change. <strong>Before public launch, the founder must confirm the published privacy-contact email, retention schedule, and requests process.</strong></p>
+      <p>We will post updates to this notice with a new effective date when practices change. The founder has selected this pilot contact email and 12-month retention policy. <strong>The deletion schedule and privacy-request workflow still require operational verification before public launch.</strong></p>
       <p>See the <Link href="/terms">pilot terms</Link> for the nature of this early-stage program.</p>
     </article>
   );
