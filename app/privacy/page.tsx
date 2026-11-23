@@ -29,11 +29,11 @@ export default function PrivacyPage() {
       <p>After a successful submission, Paltune sets a short-lived, HTTP-only receipt cookie for the thank-you page; it lasts up to 15 minutes. The application currently has no third-party browser analytics, advertising pixels, or marketing tracking cookies. During private staging, Vercel Authentication may also use login-related cookies to restrict access.</p>
 
       <h2>Retention and deletion</h2>
-      <p><strong>Founder decision required:</strong> Before opening registration to the public, Paltune must publish a specific application-retention period and establish a process for deleting records after that period or after a valid deletion request. Until those decisions are approved, this remains a private-test draft and is not a final public privacy notice.</p>
+      <p><strong>Proposed retention for founder review: 12 months.</strong> Before public registration opens, the founder must approve the retention period, document a verified request-and-deletion process, and ensure it can actually be carried out. Automatic expiry and deletion are not yet implemented. Until approval and operational checks, this remains a private-test draft rather than a final public notice.</p>
       <p>Once the contact channel is published, you will be able to request access to, correction of, or deletion of your application, or withdraw optional product-update permission, by contacting Paltune. Withdrawal of product-update permission will not affect any lawful processing already completed. Certain limited records may need to be retained where applicable law requires them.</p>
 
       <h2>Security and age</h2>
-      <p>The application uses server-side validation, restricted database permissions, and HTTPS hosting. No service can guarantee absolute security. The pilot is intended for adults aged 18 or older; if we learn that a minor submitted personal information, we will take steps to remove it.</p>
+      <p>The application uses server-side validation, restricted database permissions, and HTTPS hosting. No service can guarantee absolute security. Registration requires applicants to confirm they are at least 18; this is self-attestation, not independent age verification. We do not ask for birth dates. If we learn a minor submitted personal information, we will take steps to remove it.</p>
 
       <h2>Changes and contact</h2>
       <p>We will post updates to this notice with a new effective date when practices change. <strong>Before public launch, the founder must confirm the published privacy-contact email, retention schedule, and requests process.</strong></p>

@@ -15,7 +15,7 @@ export default function TermsPage() {
       <p>The form lets you express interest in a product concept and, if appropriate, be contacted about future research or testing. Submitting the form is free. <strong>It is not an order, purchase, deposit, paid reservation, guarantee of selection, or promise to deliver a prototype.</strong> Paltune may accept, decline, pause, or end pilot recruitment.</p>
 
       <h2>Who may participate</h2>
-      <p>The intended pilot audience is adults aged 18 or older. Please do not submit a form if you are under 18, impersonate someone else, or submit information you are not authorized to share. Keep your feedback relevant to your racket and grip experience and avoid including health records, payment details, or other sensitive information in the free-text field.</p>
+      <p>The pilot is intended for adults aged 18 or older, and registration requires you to attest you are at least 18. This is self-attestation, not independent age or identity verification. Please do not submit a form if you are under 18, impersonate someone else, or submit information you are not authorized to share. Keep your feedback relevant to your racket and grip experience and avoid including health records, payment details, or other sensitive information in the free-text field.</p>
 
       <h2>Product status, fit, and pricing</h2>
       <p>The racket-grip insert is a concept under development. Illustrations are design concepts, not evidence of manufactured dimensions, tested performance, or finalized materials. Customization and prototype review would initially be manual.</p>

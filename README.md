@@ -22,7 +22,7 @@ Open `http://localhost:3000`. The pages render without Supabase configuration. A
 3. Deploy to an HTTPS host with Next.js App Router and Node.js support. Use `npm ci` and `npm run build`. For a self-hosted Node process, use `npm start` after building. Keep staging access private. The site is marked `noindex` while the pilot and policy drafts are under review.
 4. In staging, submit a synthetic response and check the row in the project SQL editor. Resubmit the same email in a different case with a different updates choice. Verify a single row with the original answer and consent. Verify an unauthenticated Data API call to `register_griplab_pilot` is denied. Delete the staging test rows afterward.
 
-The public form is protected by server-side validation, a request size limit, and a honeypot. If the host provides request throttling, apply it to `POST /pilot` before public traffic and check that normal retries still succeed. Application error logs contain only fixed diagnostic messages. Review request logging, retention, and region settings on the deployment and Supabase projects before collecting real responses.
+The form requires adult self-attestation (18+) in the UI and in server validation; it does not collect dates of birth or independently verify age. A request size limit and honeypot remain in place. Rate limiting on `POST /pilot` must be staged, monitored, and enforced before public traffic; check that normal retries still succeed. See the pilot launch operations checklist in the GitHub draft PR. Application error logs contain only fixed diagnostic messages. Review request logging, retention, and region settings on the deployment and Supabase projects before collecting real responses.
 
 ### Founder review before public launch
 

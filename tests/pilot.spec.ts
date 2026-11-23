@@ -6,6 +6,7 @@ const getEmail = (domain = "example.test") => `${randomUUID()}@${domain}`;
 const emailInput = (page: Page) => page.getByRole("textbox", { name: "Email address" });
 const modelInput = (page: Page) => page.getByRole("textbox", { name: /racket brand and model/i });
 const priceSelect = (page: Page) => page.getByRole("combobox", { name: /how likely would you be to buy at \$49/i });
+const ageConfirmation = (page: Page) => page.getByRole("checkbox", { name: /at least 18 years old/i });
 const pilotConsent = (page: Page) => page.getByRole("checkbox", { name: /email me about my pilot response/i });
 const updatesConsent = (page: Page) => page.getByRole("checkbox", { name: /product updates/i });
 const submit = (page: Page) => page.getByRole("button", { name: "Submit pilot interest" });
@@ -13,6 +14,7 @@ const submit = (page: Page) => page.getByRole("button", { name: "Submit pilot in
 async function fillRequired(page: Page, email: string) {
   await emailInput(page).fill(email);
   await priceSelect(page).selectOption("maybe");
+  await ageConfirmation(page).check();
   await pilotConsent(page).check();
 }
 
@@ -92,6 +94,26 @@ test("invalid answers produce focused, linked errors and preserve other fields",
   expect((await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa"]).analyze()).violations).toEqual([]);
 });
 
+test("a complete response without adult attestation is rejected before storage", async ({ page, request }) => {
+  const email = getEmail();
+  await page.goto("/pilot");
+  await emailInput(page).fill(email);
+  await priceSelect(page).selectOption("maybe");
+  await pilotConsent(page).check();
+  await submit(page).click();
+
+  const summary = page.getByRole("region", { name: "Check the highlighted fields and try again." });
+  await expect(summary).toBeFocused();
+  await expect(ageConfirmation(page)).toHaveAttribute("aria-invalid", "true");
+  await expect(ageConfirmation(page)).toHaveAccessibleDescription(/confirm you are at least 18/i);
+  expect(await savedResponses(request, email)).toHaveLength(0);
+
+  await ageConfirmation(page).check();
+  await submit(page).click();
+  await expect(page).toHaveURL("/thank-you");
+  expect(await savedResponses(request, email)).toHaveLength(1);
+});
+
 test("success means a stored response and a duplicate cannot change consent", async ({ page, request, context }) => {
   const email = getEmail();
   await page.goto("/thank-you");
@@ -113,7 +135,7 @@ test("success means a stored response and a duplicate cannot change consent", as
   await expect(page).toHaveURL(/\/thank-you$/);
   expect(await savedResponses(request, email)).toEqual([expect.objectContaining({
     email, racket_model: "First racket", price_shown_cents: 4900, price_interest: "maybe",
-    pilot_consent_version: "pilot-v2", pilot_consent_at: expect.any(String),
+    pilot_consent_version: "pilot-v3", pilot_consent_at: expect.any(String),
     updates_consent_version: null, updates_consent_at: null,
   })]);
 });
@@ -159,6 +181,7 @@ test.describe("with JavaScript disabled", () => {
     await expect(page.getByRole("region", { name: "Check the highlighted fields and try again." })).toBeVisible();
     await expect(emailInput(page)).toHaveValue(email);
     await priceSelect(page).selectOption("maybe");
+    await ageConfirmation(page).check();
     await pilotConsent(page).check();
     await submit(page).click();
     await expect(page).toHaveURL(/\/thank-you$/);

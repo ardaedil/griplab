@@ -12,6 +12,7 @@ const fieldLabels: Record<keyof PilotValues, string> = {
   gripSize: "Grip size",
   gripFeedback: "What would you change about your grip?",
   priceInterest: "Interest at the proposed price",
+  adultConfirmed: "Age eligibility",
   pilotConsent: "Pilot contact permission",
   updatesConsent: "Product updates",
 };
@@ -73,6 +74,13 @@ export function PilotForm() {
           )}
         </Field>
         <div className="form-consent">
+          <label className="checkbox-row" htmlFor="adultConfirmed">
+            <input id="adultConfirmed" name="adultConfirmed" type="checkbox" required defaultChecked={values.adultConfirmed}
+              aria-invalid={Boolean(errors?.adultConfirmed) || undefined}
+              aria-describedby={errors?.adultConfirmed ? "adultConfirmed-error" : undefined} />
+            <span>I confirm that I am at least 18 years old.</span>
+          </label>
+          <FieldError name="adultConfirmed" errors={errors} />
           <label className="checkbox-row" htmlFor="pilotConsent">
             <input id="pilotConsent" name="pilotConsent" type="checkbox" required defaultChecked={values.pilotConsent}
               aria-invalid={Boolean(errors?.pilotConsent) || undefined}

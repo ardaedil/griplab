@@ -35,7 +35,8 @@ export const pilotSchema = z.object({
   priceInterest: z.enum(Object.keys(priceResponses) as (keyof typeof priceResponses)[], {
     error: "Choose how likely you would be to buy at the proposed price.",
   }),
-  pilotConsent: z.literal(true, { error: "Give permission for GripLab to contact you about the pilot." }),
+  adultConfirmed: z.literal(true, { error: "Confirm you are at least 18 years old to participate." }),
+  pilotConsent: z.literal(true, { error: "Give permission for Paltune to contact you about the pilot." }),
   updatesConsent: z.boolean(),
 });
 
@@ -47,6 +48,7 @@ export type PilotValues = {
   gripSize: string;
   gripFeedback: string;
   priceInterest: string;
+  adultConfirmed: boolean;
   pilotConsent: boolean;
   updatesConsent: boolean;
 };
@@ -59,7 +61,7 @@ export type PilotState = {
 };
 
 export const initialPilotState: PilotState = {
-  values: { email: "", racketModel: "", gripSize: "unknown", gripFeedback: "", priceInterest: "", pilotConsent: false, updatesConsent: false },
+  values: { email: "", racketModel: "", gripSize: "unknown", gripFeedback: "", priceInterest: "", adultConfirmed: false, pilotConsent: false, updatesConsent: false },
 };
 
 export const receiptCookie = "griplab_pilot_received";
