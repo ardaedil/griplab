@@ -38,6 +38,8 @@ test("landing explains the concept and offers an accessible pilot path", async (
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(/Your racket\.\s*Your grip\./);
   await expect(page.getByText("$49", { exact: true })).toBeVisible();
   await expect(page.getByText("Proposed starting price", { exact: false }).first()).toBeVisible();
+  await expect(page.getByText("Made to fit you.")).toBeVisible();
+  await expect(page.getByText(/Paltune Grip is a customizable tennis racket grip insert in development/i)).toBeVisible();
   await expect(page.getByText("Product concept illustration", { exact: true })).toBeVisible();
   const illustration = page.getByRole("img", { name: /exploded concept drawing/i });
   await expect(illustration).toBeVisible();
