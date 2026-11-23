@@ -4,7 +4,7 @@ function Brand() {
   return (
     <Link className="brand" href="/" aria-label="Paltune home">
       <span className="brand-mark" aria-hidden="true"><span /><span /></span>
-      Pal<span>tune</span>
+      pal<span>tune.</span>
     </Link>
   );
 }
