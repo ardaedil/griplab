@@ -5,8 +5,8 @@ import "@fontsource/ibm-plex-mono/500.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: { default: "GripLab | A more personal racket grip", template: "%s | GripLab" },
-  description: "Help shape a customizable tennis racket grip insert in GripLab’s prelaunch pilot.",
+  title: { default: "Paltune | Made to fit you", template: "%s | Paltune" },
+  description: "Help shape a customizable tennis racket grip insert in Paltune’s prelaunch pilot.",
   robots: { index: false, follow: false },
 };
 

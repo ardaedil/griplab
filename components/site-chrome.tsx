@@ -2,9 +2,9 @@ import Link from "next/link";
 
 function Brand() {
   return (
-    <Link className="brand" href="/" aria-label="GripLab home">
+    <Link className="brand" href="/" aria-label="Paltune home">
       <span className="brand-mark" aria-hidden="true"><span /><span /></span>
-      Grip<span>Lab</span>
+      Pal<span>tune</span>
     </Link>
   );
 }
