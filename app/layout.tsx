@@ -6,7 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: { default: "Paltune | Made to fit you", template: "%s | Paltune" },
-  description: "Help shape a customizable tennis racket grip insert in Paltune’s prelaunch pilot.",
+  description: "Explore Paltune Grip, a customizable tennis racket grip insert in development. Join the free pilot interest list.",
   robots: { index: false, follow: false },
 };
 
