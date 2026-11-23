@@ -17,7 +17,7 @@ export default async function ThankYouPage() {
         <h1 id="thanks-title">Thanks for your interest.</h1>
         <p>We’ve received your pilot response. We’ll review your setup and may email you if there’s a potential fit or we need more details.</p>
         <p>We’ll confirm compatibility only after physically verifying your specific racket-handle profile.</p>
-        <Link className="button button-outline" href="/">Back to GripLab</Link>
+        <Link className="button button-outline" href="/">Back to Paltune</Link>
       </div>
     </section>
   );

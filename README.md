@@ -1,6 +1,8 @@
-# GripLab
+# Paltune (proposed working brand)
 
-GripLab is a prelaunch site for a customizable tennis racket grip insert. The pilot collects self-reported racket setup, grip feedback, and purchase intent at a proposed $49 starting price, excluding shipping. Personalization and prototype review are initially manual. Compatibility requires physical verification of the specific handle profile.
+Paltune is a prelaunch site for a customizable tennis racket grip insert. The pilot collects self-reported racket setup, grip feedback, and purchase intent at a proposed $49 starting price, excluding shipping. Personalization and prototype review are initially manual. Compatibility requires physical verification of the specific handle profile.
+
+> **Not cleared for launch:** Paltune is a proposed brand, not a trademark-cleared name. The GitHub repository, Vercel/Supabase project names, private SQL schema/function, consent receipt cookie and existing deployment stay under their GripLab internal identifiers until an approved migration. The draft brand changes are review-only; neither the custom domain nor a public launch has been approved.
 
 ## Local development
 

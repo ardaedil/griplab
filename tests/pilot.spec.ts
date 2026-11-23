@@ -38,6 +38,8 @@ test("landing explains the concept and offers an accessible pilot path", async (
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(/Your racket\.\s*Your grip\./);
   await expect(page.getByText("$49", { exact: true })).toBeVisible();
   await expect(page.getByText("Proposed starting price", { exact: false }).first()).toBeVisible();
+  await expect(page.getByText("Made to fit you.")).toBeVisible();
+  await expect(page.getByText(/Paltune Grip is a customizable tennis racket grip insert in development/i)).toBeVisible();
   await expect(page.getByText("Product concept illustration", { exact: true })).toBeVisible();
   const illustration = page.getByRole("img", { name: /exploded concept drawing/i });
   await expect(illustration).toBeVisible();
@@ -111,7 +113,7 @@ test("success means a stored response and a duplicate cannot change consent", as
   await expect(page).toHaveURL(/\/thank-you$/);
   expect(await savedResponses(request, email)).toEqual([expect.objectContaining({
     email, racket_model: "First racket", price_shown_cents: 4900, price_interest: "maybe",
-    pilot_consent_version: "pilot-v1", pilot_consent_at: expect.any(String),
+    pilot_consent_version: "pilot-v2", pilot_consent_at: expect.any(String),
     updates_consent_version: null, updates_consent_at: null,
   })]);
 });
@@ -131,7 +133,7 @@ test("a failed storage request keeps the response editable and permits retry", a
   await submit(page).click();
   await expect(page).toHaveURL(/\/thank-you$/);
   expect(await savedResponses(request, email)).toEqual([expect.objectContaining({
-    updates_consent_version: "updates-v1", updates_consent_at: expect.any(String),
+    updates_consent_version: "updates-v2", updates_consent_at: expect.any(String),
   })]);
 });
 
@@ -139,7 +141,7 @@ test("privacy and terms mark unresolved policy choices for founder review", asyn
   await page.goto("/pilot");
   await page.getByRole("link", { name: "pilot privacy notice" }).click();
   await expect(page).toHaveURL(/\/privacy$/);
-  await expect(page.getByRole("heading", { name: "GripLab pilot privacy notice" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Paltune pilot privacy notice" })).toBeVisible();
   await expect(page.getByText(/founder-review draft/i)).toBeVisible();
   await page.getByRole("navigation", { name: "Footer" }).getByRole("link", { name: "Terms" }).click();
   await expect(page).toHaveURL(/\/terms$/);

@@ -77,12 +77,12 @@ export function PilotForm() {
             <input id="pilotConsent" name="pilotConsent" type="checkbox" required defaultChecked={values.pilotConsent}
               aria-invalid={Boolean(errors?.pilotConsent) || undefined}
               aria-describedby={errors?.pilotConsent ? "pilotConsent-error" : undefined} />
-            <span>I agree that GripLab may email me about my pilot response.</span>
+            <span>I agree that Paltune may email me about my pilot response.</span>
           </label>
           <FieldError name="pilotConsent" errors={errors} />
           <label className="checkbox-row" htmlFor="updatesConsent">
             <input id="updatesConsent" name="updatesConsent" type="checkbox" defaultChecked={values.updatesConsent} />
-            <span>I’d also like GripLab product updates. <span className="field-optional">Optional</span></span>
+            <span>I’d also like Paltune product updates. <span className="field-optional">Optional</span></span>
           </label>
           <p className="field-hint">Read the <Link href="/privacy">pilot privacy notice</Link> and <Link href="/terms">pilot terms</Link>.</p>
         </div>
