@@ -58,10 +58,10 @@ The two-bar geometric symbol is a provisional mark pending brand clearance, desi
 ## Domains and trademark position
 
 - `paltune.com` was not available in the latest Vercel check.
-- `paltune.co`, `getpaltune.com`, and `paltune.app` were available at the time checked. No registration or domain reservation has been purchased.
+- **`paltune.io` is registered** in the founder's Vercel account (November 23, 2026; one-year registration for $14.99 base charge, auto-renew OFF; order `01M83ZZZ7Q2JXRT9XB037PTD9J` completed). Older checks of `paltune.co`, `getpaltune.com`, and `paltune.app` were for comparison only.
 - Public search revealed unrelated Spanish grocery use of the exact name **Paltune**; **PalmTune** is a similar phonetic candidate to check.
 - An official, comprehensive U.S. trademark search for exact and similar marks, state/common-law uses, and related sporting goods is **not complete**. Do not claim Paltune is legally clear. Search directly using https://tmsearch.uspto.gov/ and consult qualified counsel as appropriate.
-- Preferred domain for short branding: `paltune.co`; `getpaltune.com` is a lower-cost .com alternative. Obtain founder approval to pay the actual quoted cost, renewal terms and taxes before buying anything.
+- **Chosen domain: `paltune.io`.** Added to Vercel project `griplab-staging` with explicit Preview Git branch `brand/paltune-founder-review`; project-domain ownership verified. Automatic root and wildcard ALIAS records exist. At the connection check, public DNS had not resolved and Vercel reported `misconfigured=true`; wait for valid DNS/HTTPS verification before relying on the hostname. The project is protected by Vercel Authentication; do not make it public without launch approval.
 
 ## Legal and launch gating
 
@@ -81,4 +81,4 @@ The two-bar geometric symbol is a provisional mark pending brand clearance, desi
 
 ## Next decision
 
-**Finalize trademark clearance, then confirm preferred domain and budget.** Creative identity can be considered settled internally; commercial use is gated on those checks.
+**Finish DNS/HTTPS verification, then complete trademark clearance and pilot-launch approvals.** Domain registration does not grant trademark rights. Keep Preview behind Vercel Authentication and do not launch publicly while privacy/terms and technical safeguards are drafts.
