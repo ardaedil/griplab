@@ -139,11 +139,11 @@ test("privacy and terms mark unresolved policy choices for founder review", asyn
   await page.goto("/pilot");
   await page.getByRole("link", { name: "pilot privacy notice" }).click();
   await expect(page).toHaveURL(/\/privacy$/);
-  await expect(page.getByRole("heading", { name: "Pilot privacy" })).toBeVisible();
-  await expect(page.getByText(/draft for founder review/i)).toBeVisible();
+  await expect(page.getByRole("heading", { name: "GripLab pilot privacy notice" })).toBeVisible();
+  await expect(page.getByText(/founder-review draft/i)).toBeVisible();
   await page.getByRole("navigation", { name: "Footer" }).getByRole("link", { name: "Terms" }).click();
   await expect(page).toHaveURL(/\/terms$/);
-  await expect(page.getByText(/draft for founder review/i)).toBeVisible();
+  await expect(page.getByText(/founder-review draft/i)).toBeVisible();
 });
 
 test.describe("with JavaScript disabled", () => {
