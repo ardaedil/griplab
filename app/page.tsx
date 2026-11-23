@@ -20,9 +20,9 @@ export default function Home() {
     <>
       <section className="shell hero" id="concept" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow"><span className="status-dot" /> Prelaunch pilot</p>
+          <p className="eyebrow"><span className="status-dot" /> Paltune Grip · Tennis pilot</p>
           <h1 id="hero-title">Your racket.<br />Your grip.</h1>
-          <p className="hero-description">A customizable tennis racket grip insert in development. Tell us what you play with and help shape what we prototype.</p>
+          <p className="hero-description"><strong>Made to fit you.</strong> Paltune Grip is a customizable tennis racket grip insert in development. Tell us what you play with and help shape the first prototype.</p>
           <Link className="button button-primary" href="/pilot">Join the pilot</Link>
           <p className="price"><strong>{proposedPrice}</strong><span>Proposed starting price<br />Excludes shipping</span></p>
         </div>
