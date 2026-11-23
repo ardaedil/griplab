@@ -3,7 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 import type { PilotSubmission } from "./pilot";
 import { proposedPriceDollars } from "./product";
 
-const pilotConsentVersion = "pilot-v3";
+const pilotConsentVersion = "pilot-v4";
 const updatesConsentVersion = "updates-v2";
 
 export async function savePilotSubmission(submission: PilotSubmission): Promise<boolean> {

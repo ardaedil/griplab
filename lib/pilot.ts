@@ -36,6 +36,7 @@ export const pilotSchema = z.object({
     error: "Choose how likely you would be to buy at the proposed price.",
   }),
   adultConfirmed: z.literal(true, { error: "Confirm you are at least 18 years old to participate." }),
+  usBasedConfirmed: z.literal(true, { error: "Confirm you currently live in the United States to participate." }),
   pilotConsent: z.literal(true, { error: "Give permission for Paltune to contact you about the pilot." }),
   updatesConsent: z.boolean(),
 });
@@ -49,6 +50,7 @@ export type PilotValues = {
   gripFeedback: string;
   priceInterest: string;
   adultConfirmed: boolean;
+  usBasedConfirmed: boolean;
   pilotConsent: boolean;
   updatesConsent: boolean;
 };
@@ -61,7 +63,7 @@ export type PilotState = {
 };
 
 export const initialPilotState: PilotState = {
-  values: { email: "", racketModel: "", gripSize: "unknown", gripFeedback: "", priceInterest: "", adultConfirmed: false, pilotConsent: false, updatesConsent: false },
+  values: { email: "", racketModel: "", gripSize: "unknown", gripFeedback: "", priceInterest: "", adultConfirmed: false, usBasedConfirmed: false, pilotConsent: false, updatesConsent: false },
 };
 
 export const receiptCookie = "griplab_pilot_received";

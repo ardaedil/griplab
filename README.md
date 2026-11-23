@@ -2,7 +2,7 @@
 
 Paltune is a prelaunch site for a customizable tennis racket grip insert. The pilot collects self-reported racket setup, grip feedback, and purchase intent at a proposed $49 starting price, excluding shipping. Personalization and prototype review are initially manual. Compatibility requires physical verification of the specific handle profile.
 
-> **Not cleared for launch:** Paltune is a proposed brand, not a trademark-cleared name. The GitHub repository, Vercel/Supabase project names, private SQL schema/function, consent receipt cookie and existing deployment stay under their GripLab internal identifiers until an approved migration. The draft brand changes are review-only; neither the custom domain nor a public launch has been approved.
+> **Not cleared for launch:** Paltune is a founder-selected brand, not a trademark-cleared name. The paltune.io domain has been registered and mapped to a protected Preview, not publicly launched. The GitHub repository, Vercel/Supabase project names, private SQL schema/function, receipt cookie and existing staging deployment retain GripLab internal identifiers. These PR changes are review-only and must not be merged for public signup until the launch checklist is complete.
 
 ## Local development
 
@@ -22,11 +22,11 @@ Open `http://localhost:3000`. The pages render without Supabase configuration. A
 3. Deploy to an HTTPS host with Next.js App Router and Node.js support. Use `npm ci` and `npm run build`. For a self-hosted Node process, use `npm start` after building. Keep staging access private. The site is marked `noindex` while the pilot and policy drafts are under review.
 4. In staging, submit a synthetic response and check the row in the project SQL editor. Resubmit the same email in a different case with a different updates choice. Verify a single row with the original answer and consent. Verify an unauthenticated Data API call to `register_griplab_pilot` is denied. Delete the staging test rows afterward.
 
-The form requires adult self-attestation (18+) in the UI and in server validation; it does not collect dates of birth or independently verify age. A request size limit and honeypot remain in place. Rate limiting on `POST /pilot` must be staged, monitored, and enforced before public traffic; check that normal retries still succeed. See the pilot launch operations checklist in the GitHub draft PR. Application error logs contain only fixed diagnostic messages. Review request logging, retention, and region settings on the deployment and Supabase projects before collecting real responses.
+The form requires adult (18+) and U.S.-based self-attestations in the UI and in server validation; it does not collect dates of birth or residential addresses and cannot independently verify eligibility. A request size limit and honeypot remain in place. Rate limiting on `POST /pilot` must be staged, monitored, and enforced before public traffic; check that normal retries still succeed. See the pilot launch operations checklist in the GitHub draft PR. Application error logs contain only fixed diagnostic messages. Review request logging, retention, and region settings on the deployment and Supabase projects before collecting real responses.
 
 ### Founder review before public launch
 
-- Confirm the responsible entity, contact address, pilot eligibility and terms, data retention, and how people can request access, deletion, or withdrawal. Update the draft privacy and terms pages and revise the consent versions if their wording changes.
+- Individual operator: Arda Edil. Founder-approved pilot contact email: ardaedil@gmail.com. Eligibility: adults 18+ currently living in the U.S. Retention: up to 12 months from the original signup. Before accepting real submissions, test the ability to honor access/deletion and optional-update withdrawal requests; set up and verify the actual deletion schedule. The draft privacy and terms are not yet final legal advice.
 - Confirm hosting and data-processing arrangements and the price and shipping assumptions. Establish who can access responses and who follows up on pilot or product-update permission. The app records those choices and sends no email.
 - Physically verify specific racket-handle profiles and review prototypes before publishing any compatibility or performance claim. Treat price responses as stated intent and use actual prototype feedback to guide product decisions.
 

@@ -15,6 +15,7 @@ export async function registerPilot(_previous: PilotState, form: FormData): Prom
   const gripFeedback = form.get("gripFeedback") ?? "";
   const priceInterest = form.get("priceInterest");
   const adultConfirmed = form.get("adultConfirmed") === "on";
+  const usBasedConfirmed = form.get("usBasedConfirmed") === "on";
   const pilotConsent = form.get("pilotConsent") === "on";
   const updatesConsent = form.get("updatesConsent") === "on";
   const values = {
@@ -24,6 +25,7 @@ export async function registerPilot(_previous: PilotState, form: FormData): Prom
     gripFeedback: displayValue(gripFeedback, pilotLimits.gripFeedback),
     priceInterest: displayValue(priceInterest, 12),
     adultConfirmed,
+    usBasedConfirmed,
     pilotConsent,
     updatesConsent,
   };
@@ -32,7 +34,7 @@ export async function registerPilot(_previous: PilotState, form: FormData): Prom
     return { attempt, values, message: "We couldn’t accept this response. Clear any autofilled fields or reload the form and try again." };
   }
 
-  const result = pilotSchema.safeParse({ email, racketModel, gripSize, gripFeedback, priceInterest, adultConfirmed, pilotConsent, updatesConsent });
+  const result = pilotSchema.safeParse({ email, racketModel, gripSize, gripFeedback, priceInterest, adultConfirmed, usBasedConfirmed, pilotConsent, updatesConsent });
   if (!result.success) {
     return { attempt, values, message: "Check the highlighted fields and try again.", errors: z.flattenError(result.error).fieldErrors };
   }

@@ -15,7 +15,7 @@ export default function TermsPage() {
       <p>The form lets you express interest in a product concept and, if appropriate, be contacted about future research or testing. Submitting the form is free. <strong>It is not an order, purchase, deposit, paid reservation, guarantee of selection, or promise to deliver a prototype.</strong> Paltune may accept, decline, pause, or end pilot recruitment.</p>
 
       <h2>Who may participate</h2>
-      <p>The pilot is intended for adults aged 18 or older, and registration requires you to attest you are at least 18. This is self-attestation, not independent age or identity verification. Please do not submit a form if you are under 18, impersonate someone else, or submit information you are not authorized to share. Keep your feedback relevant to your racket and grip experience and avoid including health records, payment details, or other sensitive information in the free-text field.</p>
+      <p>The pilot is intended only for people who are at least 18 years old and currently live in the United States. Registration requires you to attest to both conditions. This is self-attestation, not independent age, identity, or residency verification. Please do not submit a form if you are under 18, live outside the United States, impersonate someone else, or submit information you are not authorized to share. Keep your feedback relevant to your racket and grip experience and avoid including health records, payment details, or other sensitive information in the free-text field.</p>
 
       <h2>Product status, fit, and pricing</h2>
       <p>The racket-grip insert is a concept under development. Illustrations are design concepts, not evidence of manufactured dimensions, tested performance, or finalized materials. Customization and prototype review would initially be manual.</p>
@@ -29,8 +29,8 @@ export default function TermsPage() {
       <p>Our <Link href="/privacy">pilot privacy notice</Link> explains what the form collects and how it is used. Do not attempt to misuse the form, interfere with the website, or submit misleading, malicious, or unlawful content. Paltune may change the website and pilot process as the concept develops.</p>
 
       <h2>Important information before launch</h2>
-      <p>Paltune is currently operated by Arda Edil as an individual, not an LLC. <strong>Founder decisions required:</strong> Publish a working contact email, approve geographic eligibility, and establish the data-retention and privacy-request process before public registration opens. This draft does not replace a separate agreement for physical prototype testing or any future sale.</p>
-      <p>Nothing in these pilot terms is intended to waive rights that cannot legally be waived. Questions about the pilot should be directed to Paltune using the contact method that will be added before launch.</p>
+      <p>Paltune is currently operated by Arda Edil as an individual, not an LLC. Questions and privacy requests can be sent to <a href="mailto:ardaedil@gmail.com">ardaedil@gmail.com</a>. The founder has approved a U.S.-only adult pilot and a 12-month application retention period. <strong>Before public launch, the deletion schedule, privacy request process, and marketing opt-out handling must be verified.</strong> This draft does not replace a separate agreement for physical prototype testing or any future sale.</p>
+      <p>Nothing in these pilot terms is intended to waive rights that cannot legally be waived. For questions, contact Paltune using the email above.</p>
     </article>
   );
 }
