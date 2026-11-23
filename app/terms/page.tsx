@@ -29,7 +29,7 @@ export default function TermsPage() {
       <p>Our <Link href="/privacy">pilot privacy notice</Link> explains what the form collects and how it is used. Do not attempt to misuse the form, interfere with the website, or submit misleading, malicious, or unlawful content. GripLab may change the website and pilot process as the concept develops.</p>
 
       <h2>Important information before launch</h2>
-      <p><strong>Founder decision required:</strong> Identify the individual or legal entity operating GripLab, publish a working contact email, approve geographic eligibility, and establish the data-retention and privacy-request process before public registration opens. This draft does not replace a separate agreement for physical prototype testing or any future sale.</p>
+      <p>GripLab is currently operated by Arda Edil as an individual, not an LLC. <strong>Founder decisions required:</strong> Publish a working contact email, approve geographic eligibility, and establish the data-retention and privacy-request process before public registration opens. This draft does not replace a separate agreement for physical prototype testing or any future sale.</p>
       <p>Nothing in these pilot terms is intended to waive rights that cannot legally be waived. Questions about the pilot should be directed to GripLab using the contact method that will be added before launch.</p>
     </article>
   );
