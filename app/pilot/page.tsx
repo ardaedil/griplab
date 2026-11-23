@@ -11,7 +11,7 @@ export default function PilotPage() {
       <div className="pilot-intro">
         <p className="eyebrow"><span className="status-dot" /> Prelaunch pilot</p>
         <h1 id="pilot-title">Join the pilot.</h1>
-        <p>Tell us what you play with and what you’d change about your grip. Your answers will help shape the first prototype.</p>
+        <p>Tell us what you play with and what you’d change about your grip. Your answers will help shape the first Paltune Grip prototype.</p>
         <aside className="pilot-aside" aria-labelledby="pilot-expectations">
           <span className="step-icon"><ListChecks aria-hidden="true" size={22} /></span>
           <h2 id="pilot-expectations">What to expect</h2>
