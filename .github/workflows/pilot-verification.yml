@@ -1,0 +1,45 @@
+name: Paltune pilot verification
+
+on:
+  push:
+    branches:
+      - launch/pilot-readiness-review
+  pull_request:
+    branches:
+      - brand/paltune-founder-review
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: paltune-pilot-verification-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Lint, types, build, database and browser tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out source
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+        with:
+          node-version: "22"
+          package-manager-cache: false
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Lint
+        run: npm run lint
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Build
+        run: npm run build
+      - name: Install Chromium and Linux libraries
+        run: npx playwright install --with-deps chromium
+      - name: Database and desktop/mobile browser tests (synthetic fixture only)
+        run: npm test
